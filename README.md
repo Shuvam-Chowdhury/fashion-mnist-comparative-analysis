@@ -23,29 +23,30 @@ This report includes:
 
 Repository Structure
 
+```
+
 fashion-mnist-comparative-analysis/
 │
 ├── Comparative_Analysis_of_Image_Classification_Algorithms_on_Fashion_MNIST_Report.pdf
 │
-├── data/ # (Optional folder for external data if needed)
+├── data/
+│   └── prepare_data.py                 # Script for downloading + converting dataset
 │
-├── fashion_mnist_demo/ # CNN demo + scripts
-│ ├── cnn_model.pth # Saved CNN model weights
-│ ├── cnn_model.py # CNN architecture definition
-│ ├── cnn_train.py # Training script used to train the CNN
+├── fashion_mnist_demo/                 # CNN demo + scripts
+│   ├── cnn_model.pth                   # Saved CNN model weights
+│   ├── cnn_model.py                    # CNN architecture definition
+│   └── cnn_train.py                    # CNN training script
 ││
-├── fashion_mnist_train.csv # Training dataset (pre-converted)
-├── fashion_mnist_val.csv # Validation dataset
-├── fashion_mnist_test.csv # Test dataset
+├── notebooks/
+│   ├── fashion_mnist_zero_shot.ipynb   # CLIP zero-shot classification notebook
+│   └── fashion_mnist_cnn_d_model.ipynb # CNN development notebook
 │
-├── notebooks/ # Jupyter notebooks
-│ ├── fashion_mnist_zero_shot.ipynb # CLIP zero-shot classification notebook
-│ └── fashion_mnist_cnn_d_model.ipynb # CNN model development notebook
-││
-├── requirements.txt # Python dependencies
-├── README.md # Project documentation (this file)
-├── LICENSE # MIT License
+├── requirements.txt                    # Python dependencies
+├── README.md                           # Project documentation
+├── LICENSE                             # MIT License
 └── .gitignore
+
+```
 
 ---
 
@@ -166,49 +167,58 @@ The following table summarizes the performance of all models evaluated in this s
 
 ---
 
-## virtualenvironment
+Installation
 
-create a virtual environment to install the dependencies and libraries
+Follow the steps below to set up the project environment and run the models.
 
-```bash
-virtualenv env_name
-```
-
-for MAC
-
-1. Open your terminal.
-2. Install virtualenv using pip:
-   pip install virtualenv
-3. Navigate to your project directory:
-   cd /path/to/your/project
-4. Create a virtual environment:
-   virtualenv env_name
-5. Run the following command to activate the virtual environment:
-   source env_name/bin/activate
-
-### Python Version:
-
-- Python 3.7 or above
-
-How to Run the Code
-
-1. Clone the repository
+1. Clone the Repository:
 
 git clone https://github.com/Shuvam-Chowdhury/fashion-mnist-comparative-analysis.git
 cd fashion-mnist-comparative-analysis
 
-2. Install dependencies
+2. Create and Activate a Virtual Environment (optional, but recommended)
+
+macOS / Linux:
+
+python3 -m venv env
+source env/bin/activate
+
+Windows:
+python -m venv env
+env\Scripts\activate
+
+Python requirement: Python 3.7 or above
+
+3. Install dependencies:
 
 pip install -r requirements.txt
 
-3. Run the CNN Demo
+4. Prepare the Dataset:
+
+The Fashion-MNIST dataset is not included directly in the repository.
+
+Run:
+python prepare_data.py
+This script will:
+• Download the Fashion-MNIST dataset
+• Convert it into CSV files
+• Create the data/ directory with:
+
+```
+data/
+├── fashion_mnist_train.csv
+├── fashion_mnist_val.csv
+├── fashion_mnist_test.csv
+```
+
+5. Run the CNN Demo:
 
 python cnn_train.py # Train the CNN model
 python cnn_model.py # View model architecture
 
 cnn_model.pth will be generated automatically.
 
-4. Run Jupyter Notebooks
+6. Run Jupyter Notebooks
 
 jupyter notebook
 
