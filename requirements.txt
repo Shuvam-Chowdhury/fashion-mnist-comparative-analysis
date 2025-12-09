@@ -1,0 +1,11 @@
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+torch
+torchvision
+tensorflow           # only if CLIP variant uses TF-hub
+tensorflow-hub       # remove if not needed
+scipy
+xgboost              # only if used in notebooks
