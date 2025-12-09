@@ -223,7 +223,9 @@ cnn_model.pth will be generated automatically.
 jupyter notebook
 
 Then open:
+
 • notebooks/fashion_mnist_cnn_d_model.ipynb
+
 • notebooks/fashion_mnist_zero_shot.ipynb
 
 License:
@@ -233,3 +235,4 @@ Acknowledgments:
 Fashion-MNIST dataset by Zalando Research
 CLIP model by OpenAI
 Built with Python, PyTorch, NumPy, Pandas, Matplotlib, Scikit-Learn, and Hugging Face libraries.
+
