@@ -1,0 +1,32 @@
+# --- Python bytecode / cache ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Virtual environments ---
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+# Local virtualenv folder created for this project
+fashion_mnist/
+
+# --- Jupyter Notebook ---
+.ipynb_checkpoints/
+
+# --- Model weights / checkpoints ---
+*.pth
+*.pt
+
+# --- Logs / temp files ---
+*.log
+
+# --- OS / editor files ---
+.DS_Store
+Thumbs.db
+
+# --- Build / dist (not really used here, but safe) ---
+build/
+dist/
