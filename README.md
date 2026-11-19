@@ -174,6 +174,7 @@ Follow the steps below to set up the project environment and run the models.
 1. Clone the Repository:
 
 git clone https://github.com/Shuvam-Chowdhury/fashion-mnist-comparative-analysis.git
+
 cd fashion-mnist-comparative-analysis
 
 2. Create and Activate a Virtual Environment (optional, but recommended)
